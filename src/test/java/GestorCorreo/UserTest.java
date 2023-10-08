@@ -24,11 +24,12 @@ public class UserTest {
         MailManager aplicacion = new MailManager();
         User Ori = aplicacion.crearUsuario("Oriana", "Farela", "orifarela");
         User Lau = aplicacion.crearUsuario("Lau", "Vega", "vegano");
+        User Mario = aplicacion.crearUsuario("Pepe", "Gonzales", "mariogonzales");
 
         int createuser = aplicacion.getListaUsuarios().size();
         User usuarioOri = aplicacion.getListaUsuarios().get(0);
         
-        assertEquals(2, createuser);
+        assertEquals(3, createuser);
         assertEquals(Ori, usuarioOri);
     }
   
