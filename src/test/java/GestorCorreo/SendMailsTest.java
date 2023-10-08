@@ -7,19 +7,19 @@ import java.util.ArrayList;
 
 public class SendMailsTest {
 @Test
-    public void create_app_create_user_send_mail(){
+    public void crateUserandMail(){
     MailManager aplicacion = new MailManager();
-    User lau = aplicacion.crearUsuario("Lautaro", "Vegano", "lauvega");
-    User felix = aplicacion.crearUsuario("Felix", "Toledo", "felixt");
-    User pedro = aplicacion.crearUsuario("Pedro", "Rosales", "pedro@gmail.com");
+    User gonza= aplicacion.crearUsuario("Gonzalo", "Chaco", "gonzachaco");
+    User oriana = aplicacion.crearUsuario("Oriana", "Farela", "orianafarela");
+    User mario = aplicacion.crearUsuario("Mario", "Gonzales", "mariogonzales@gmail.com");
     ArrayList<String> para = new ArrayList<>();
-    para.add("felixt@aquilita.com");
-    para.add("pedro@gmail.com");
+    para.add("orianafarela@aquilita.com");
+    para.add("mariogonzales@gmail.com");
 
-    lau.crearMensaje(aplicacion, "Que onda mi hermano", "Buennos dias, quiero pregunntarte como estas", para);
-    assertEquals(1, lau.getSalida().tamano());
-    assertEquals(1, felix.getEntrada().tamano());
-    assertEquals(1, pedro.getEntrada().tamano());
+    gonza.crearMensaje(aplicacion, "Buen dia", "Hola queres jugar", para);
+    assertEquals(1, gonza.getSalida().tamano());
+    assertEquals(1, oriana.getEntrada().tamano());
+    assertEquals(1, mario.getEntrada().tamano());
 }
 
 }
