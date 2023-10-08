@@ -15,7 +15,7 @@ public class FilterTest {
      
 
      @Test
-     public void filter_from_title(){
+     public void Filter1(){
           oriana.anadirContacto("Pepe", "Gozanles Facu", "mariogonzales@aquilita.com");
           oriana.anadirContacto("Lautaro", "vegano", "vegano@gmail.com");
 
@@ -29,7 +29,7 @@ public class FilterTest {
      }
 
      @Test
-     public void filter_from_message(){
+     public void FilterMessage(){
           oriana.crearMensaje(app, "buen dia", "hola pepe", "mariogonzales@aquilita.com");
           oriana.crearMensaje(app, "buenas tardes", " jugamos", "mariogonzales@aquilita.com");
      
@@ -39,7 +39,7 @@ public class FilterTest {
      }
 
      @Test
-     public void filter_from_from(){
+     public void FilterWho(){
           oriana.crearMensaje(app, "hola", "jugamos", "vegano@gmail.com");
           oriana.crearMensaje(app, "chau", "no jugamos", "vegano@gmail.com");
           mario.crearMensaje(app, "Buen dia", "como estas", "vegano@gmail.com");
@@ -50,7 +50,7 @@ public class FilterTest {
      }
 
      @Test
-     public void filter_from_title_and_from(){
+     public void FilterTitleandWho(){
           oriana.crearMensaje(app, "buenas", "jugamos", "vegano@gmail.com");
           oriana.crearMensaje(app, "hola ", "jugamos", "vegano@gmail.com");
           oriana.crearMensaje(app, "chau", "gracias", "vegano@gmail.com");
@@ -62,19 +62,19 @@ public class FilterTest {
      }
 
      @Test
-     public void filter_from_title_and_message(){
-          felix.crearMensaje(app, "hola", "mi hermano", "rodrigo@gmail.com");
-          felix.crearMensaje(app, "este no", "mi hermano", "rodrigo@gmail.com");
-          felix.crearMensaje(app, "chau", "este no busco", "rodrigo@gmail.com");
-          grace.crearMensaje(app, "hola", "hermano, como estas?", "rodrigo@gmail.com");
+     public void FilterTitleandMessage(){
+          oriana.crearMensaje(app, "hola", "jugamos", "vegano@gmail.com");
+          oriana.crearMensaje(app, "este no", "jugamos", "vegano@gmail.com");
+          oriana.crearMensaje(app, "chau", "hasta luego", "vegano@gmail.com");
+          mario.crearMensaje(app, "hola", "jugamos?", "vegano@gmail.com");
 
           FiltroMensajeAsunto filtro = new FiltroMensajeAsunto();
-          ArrayList<Mail> resultado = rodrigo.filtrarEntrada("hola", "hermano", filtro);
+          ArrayList<Mail> resultado = lau.filtrarEntrada("hola", "jugamos", filtro);
           assertEquals(2, resultado.size());
      }
 
      @Test
-     public void name_of_filters(){
+     public void NameFilters(){
           FiltroRemitente filtroRemitente = new FiltroRemitente();
           FiltroMensaje filtroMensaje = new FiltroMensaje();
           FiltroAsunto filtroAsunto = new FiltroAsunto();
