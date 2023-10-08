@@ -5,11 +5,11 @@ import java.util.ArrayList;
 
 public class BandejaTest {
      @Test
-     public void creation_of_box(){
+     public void CreationBandeja(){
           Bandeja bandeja = new Bandeja();
           ArrayList<String> para = new ArrayList<>();
-          Mail mail1 = new Mail("Hola", "Felix", "Como", para);
-          Mail mail2 = new Mail("Hola2", "Felix2", "Como2", para);
+          Mail mail1 = new Mail("Hola", "ori", "Como", para);
+          Mail mail2 = new Mail("Hola2", "ori2", "Como2", para);
 
           bandeja.anadir(mail1);
           bandeja.anadir(mail2);
