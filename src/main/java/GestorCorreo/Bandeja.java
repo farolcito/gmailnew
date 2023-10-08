@@ -10,7 +10,6 @@ public class Bandeja {
         return mails.size();
     }
 
-
     public void anadir(Mail mail) {
         mails.add(mail);
     }
@@ -22,4 +21,5 @@ public class Bandeja {
     public ArrayList<Mail> traerTodo(){
         return mails;
     }
-}
+
+ }

@@ -25,6 +25,7 @@ public class Contacto {
           this.nombre = nombre;
     }
 
+    
     public String getNombre(){
           return nombre;
     }
