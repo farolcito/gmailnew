@@ -105,4 +105,18 @@ public class FilterTest {
           assertEquals("Filtro de Asunto", nombreFiltroAsunto);
 
      }
+
+     
+     @Test
+     public void FilterOriginal(){
+          oriana.anadirContacto("Pepe", "Gozanles Facu", "mariogonzales@aquilita.com");
+          oriana.anadirContacto("Lautaro", "vegano", "vegano@gmail.com");
+
+          oriana.crearMensaje(app, "Si", "mensaje", oriana.getTodosLosMailsDeContactos());
+          oriana.crearMensaje(app, "No", "mjito", "vegano@gmail.com");
+          oriana.crearMensaje(app, "Si", "mensaje", "mariogonzales@aquilita.com");
+
+          FiltroAsunto filtro = new FiltroAsunto();
+          ArrayList<Mail> resultado = oriana.Bandeja("Si", filtro);
+          assertEquals(2, resultado.size());
 }
