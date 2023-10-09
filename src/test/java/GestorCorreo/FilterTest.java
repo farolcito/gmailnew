@@ -29,6 +29,22 @@ public class FilterTest {
      }
 
      @Test
+     public void FilterTitleandWho2(){
+          mario.anadirContacto("Oriana", "Farela", "orianafarela@aquilita.com");
+          mario.anadirContacto("Lautaro", "vegano", "vegano@gmail.com");
+
+          mario.crearMensaje(app, "buenas", "jugamos", mario.getTodosLosMailsDeContactos());
+          mario.crearMensaje(app, "hola ", "jugamos", "vegano@gmail.com");
+          mario.crearMensaje(app, "chau", "gracias", "vegano@gmail.com");
+          oriana.crearMensaje(app, "hola", "como estas?", "vegano@gmail.com");
+
+          FiltroRemitenteAsunto filtro = new FiltroRemitenteAsunto();
+          ArrayList<Mail> resultado = mario.filtrarSalida("hola", "mario", filtro);
+          assertEquals(1, resultado.size());
+}
+
+
+     @Test
      public void FilterMessage(){
           oriana.crearMensaje(app, "buen dia", "hola pepe", "mariogonzales@aquilita.com");
           oriana.crearMensaje(app, "buenas tardes", " jugamos", "mariogonzales@aquilita.com");
