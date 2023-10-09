@@ -55,17 +55,18 @@ public class UserTest {
 
     @Test
     public void userSearchContact(){
-        Contacto oriana = new Contacto("Oriana", "Farela", "orianafarela@gmail.com");
-        Contacto mario = new Contacto("Pepe", "Goznales", "elpepe@gmail.com");
-        ArrayList<Contacto> listadecontactos23 = new ArrayList<>();
-         listadecontactos23.add(oriana);
-         listadecontactos23.add(mario);
+        User oriana = new User("Ori", "Farela", "orifarela");
+        oriana.anadirContacto("Mario", "Gonzalez", "marito@gmail.com");
+        oriana.anadirContacto("Lau", "Vega", "Lauvege@hotmail.com");
 
-    
+        int cantidadContactos = oriana.getListaContactos().size();
 
-
+        assertEquals(2, cantidadContactos);
 }
 }
+
+      
+          
 
       
           
