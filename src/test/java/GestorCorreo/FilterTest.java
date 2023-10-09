@@ -105,6 +105,16 @@ public class FilterTest {
           assertEquals("Filtro de Asunto", nombreFiltroAsunto);
 
      }
+     
+     @Test
+     public void filter_null(){
+          FiltroRemitente filtroRemitente = new FiltroRemitente();
+
+          mario.crearMensaje(app, "hola", "mi hermana", "");
+          ArrayList<Mail> resultado = mario.filtrarEntrada("hola", "hermana", filtroRemitente);
+          assertNull(null, resultado);
+
+     }
 
      
 }
