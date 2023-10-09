@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import GestorCorreo.*;
 
 public class FiltroRemitenteAsunto extends Filtro {
-    public FiltroRemitenteAsunto(){
+     public FiltroRemitenteAsunto(){
           super.setNombre("Filtro de Asunto y Remitente");
      }
 
@@ -24,4 +24,3 @@ public class FiltroRemitenteAsunto extends Filtro {
      }
 
 }
-

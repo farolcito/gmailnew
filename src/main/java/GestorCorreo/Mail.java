@@ -9,7 +9,7 @@ public class Mail {
     private String remitente;
 // guarda en una lista de Strings los correos. 
     private ArrayList<String> para = new ArrayList<>();
-
+    
 //Constructor que recive nuestros atributos y da un espacio de memorias a las clases.(instancia las clases)
     public Mail(String asunto, String mensaje,  String remitente, ArrayList<String> para){
         this.asunto = asunto;
@@ -19,7 +19,7 @@ public class Mail {
     }
 //mediante el uso del Set y Get podremos acceder a las clases
 //Set es para setear un valor, con eso podemos poner un valor
-//con get obtenemos un valor
+//con get obtenemos un valor    
     public String getAsunto() {
         return asunto;
     }

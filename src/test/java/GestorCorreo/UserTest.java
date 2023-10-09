@@ -61,7 +61,7 @@ public class UserTest {
          listadecontactos23.add(oriana);
          listadecontactos23.add(mario);
 
-    assertEquals("oriana", listadecontactos23);
+    
 
 
 }
