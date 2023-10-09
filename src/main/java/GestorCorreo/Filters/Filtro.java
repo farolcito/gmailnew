@@ -9,11 +9,7 @@ public abstract class Filtro {
           return null;
      }
 
-     public ArrayList<Mail> filtrar(String asuntoBuscar, String buscarOtro, Bandeja Bandeja){
-          buscarString(asuntoBuscar, Bandeja);
-          buscarString(buscarOtro, Bandeja);
-          return null;
-     }
+     
 
      public ArrayList<Mail> filtrar(String aBuscar, Bandeja bandeja){
           ArrayList<Mail> mails = buscarString(aBuscar, bandeja);
