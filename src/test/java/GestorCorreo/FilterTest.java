@@ -43,7 +43,8 @@ public class FilterTest {
           oriana.crearMensaje(app, "hola", "jugamos", "vegano@gmail.com");
           oriana.crearMensaje(app, "chau", "no jugamos", "vegano@gmail.com");
           mario.crearMensaje(app, "Buen dia", "como estas", "vegano@gmail.com");
-
+          mario.crearMensaje(app, "Buenas Noches", "que descanses", "vegano@gmail.com");
+          
           FiltroRemitente filtro = new FiltroRemitente();
           ArrayList<Mail> resultado = lau.filtrarEntrada("oriana", filtro);
           assertEquals(2, resultado.size());
