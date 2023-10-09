@@ -32,10 +32,10 @@ public class FilterTest {
      public void FilterMessage(){
           oriana.crearMensaje(app, "buen dia", "hola pepe", "mariogonzales@aquilita.com");
           oriana.crearMensaje(app, "buenas tardes", " jugamos", "mariogonzales@aquilita.com");
-     
+          oriana.crearMensaje(app, "buenas noches", "hola como estas?", "mariogonzales@aquilita.com");
           FiltroMensaje filtro = new FiltroMensaje();
           ArrayList<Mail> resultado = mario.filtrarEntrada("hola", filtro);
-          assertEquals(1, resultado.size());
+          assertEquals(2, resultado.size());
      }
 
      @Test
